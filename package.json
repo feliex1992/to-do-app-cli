@@ -1,0 +1,21 @@
+{
+  "name": "todos_jafarpahrudin_cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./src/index.js",
+    "test": "jest --watchAll"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "btoa": "^1.2.1",
+    "dotenv": "^8.2.0",
+    "moment": "^2.29.1",
+    "node-fetch": "^2.6.1",
+    "pouchdb": "^7.2.2",
+    "qoa": "^0.2.0"
+  }
+}

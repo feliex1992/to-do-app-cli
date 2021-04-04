@@ -1,0 +1,58 @@
+{
+  "_from": "pouchy-store",
+  "_id": "pouchy-store@0.1.7",
+  "_inBundle": false,
+  "_integrity": "sha512-2YNgacNmWBY0E4FVTja5eqhe4lq4xNuQYfBmFJCrLDksp4qlF347I4lWGVRtxPOELjl9nia07coxqLBwg2jqcA==",
+  "_location": "/pouchy-store",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "pouchy-store",
+    "name": "pouchy-store",
+    "escapedName": "pouchy-store",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/pouchy-store/-/pouchy-store-0.1.7.tgz",
+  "_shasum": "386f61a3d55fb509a6c8acc2a5eaa3fc459b070d",
+  "_spec": "pouchy-store",
+  "_where": "/home/jafar/projects/jafar/todos_jafarpahrudin_cli",
+  "author": {
+    "name": "eFishery"
+  },
+  "bugs": {
+    "url": "https://github.com/eFishery/pouchy-store/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "pouchdb": "^7.0.0",
+    "pouchdb-adapter-websql-core": "^7.0.0",
+    "react-native-sqlite-storage": "^3.3.9"
+  },
+  "deprecated": false,
+  "description": "Libraries to ease pouch-couch stack on offline first app",
+  "homepage": "https://github.com/eFishery/pouchy-store#readme",
+  "keywords": [
+    "pouch",
+    "couch",
+    "offline-first",
+    "react"
+  ],
+  "license": "GPL-3.0",
+  "main": "index.js",
+  "name": "pouchy-store",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eFishery/pouchy-store.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "0.1.7"
+}
