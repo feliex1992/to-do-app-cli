@@ -1,4 +1,4 @@
-const PouchyStore = require('../../middleware/pouchy-store');
+const PouchyStore = require ('../../middleware/pouchy-store');
 
 class TodosStore extends PouchyStore {
   get name() {
@@ -34,13 +34,34 @@ class TodosStore extends PouchyStore {
     });
   }
 
-  async sync() {
+  async upload() {
     try {
       await this.upload();
       return Promise.resolve(true);
     } catch(e) {
       console.log('Sync failed due to conenction issue.');
       return Promise.resolve(false);
+    }
+  }
+
+  async sync() {
+    try {
+      const connected = await checkInternet(taskStore.urlRemote);
+      if (connected) {
+        if (!taskStore.isRemoteInitialized) {
+          try {
+            await taskStore.initializeRemote();
+          } catch {
+            return false;
+          }
+        }
+        await taskStore.upload();
+        return true;
+      } else {
+        return false;
+      }
+    } catch {
+      return false;
     }
   }
 

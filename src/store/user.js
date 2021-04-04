@@ -1,4 +1,4 @@
-const PouchyStore = require('../../middleware/pouchy-store');
+const PouchyStore = require ('../../middleware/pouchy-store');
 
 class UserStore extends PouchyStore {
   get name() {
