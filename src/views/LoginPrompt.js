@@ -5,7 +5,7 @@ class LoginPrompt {
   prompt = async() => {
     await qoa.clearScreen();
     console.log("Login to To Do App CLI.");
-
+    
     let email;
 
     const form = async () => {

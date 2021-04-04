@@ -1,6 +1,9 @@
 const qoa = require('qoa');
 const ControllerBase = require('./ControllerBase');
-const todoMenus = {
+
+const todosStore = require('../store/todos');
+
+let todoMenus = {
   syncData: 'Sync Data',
   createNew: 'Create New',
   showOpen: 'Open Task',
@@ -14,6 +17,8 @@ class ToDoMenuController extends ControllerBase {
   async menu(data) {
     await qoa.clearScreen();
 
+    todoMenus.syncData = `Sync Data (${await todosStore.countUnuploadeds()})`
+    
     const { email } = data;
     console.log(`Wellcome ${email} [To Do App CLI]`)
     

@@ -10,16 +10,16 @@ class TodosStore extends PouchyStore {
   }
 
   get urlRemote() {
-    console.log("Url");
-    return "http://13.250.43.79:5984/";
+    console.log("URL");
+    return process.env.COUCH_URL;
   }
 
   get optionsRemote() {
     console.log("Auth");
     return {
       auth: {
-        username: 'admin',
-        password: 'iniadmin',
+        username: process.env.COUCH_USR,
+        password: process.env.COUCH_PW,
       }
     };
   }
